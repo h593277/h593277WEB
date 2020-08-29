@@ -7,19 +7,51 @@
 <body>
  <ul class="ListClass">
   <li class="ListElemClass"><a href="Startside.html">Hjem</a></li>
-  <li class="ListElemClass"><a href="Ladepunkt.html">Ladepunkt</a></li>
-  <li class="ListElemClass"><a href="contact.html">Contact</a></li>
-  <li class="ListElemClass"><a href="about.html">About</a></li>
+  <li class="ListElemClass" style="display: none>
+  <div id="myDropdown" class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" style="display: block;">Ladepunkter</button>
+  <div id="DropDownList" class="dropdown-content" style="position: absolute;">
+    <a href="Ladepunkt.html" style="z-index: 999;">Bergen</a>
+    <a href="LadePunktOslo.html" style="z-index: 999";>Oslo</a>
+    <a href="LadepunktLofoten.html" style="z-index: 999";>Lofoten</a>
+  </div>
+</div>
+</li>
+  <li class="ListElemClass"><a href="Kontakt.html">Kontakt</a></li>
+  <li class="ListElemClass"><a href="OmOss.html">Om Oss</a></li>
 </ul> 
 <center>
 <h1>Elbåt Lading</h1>
 <h2>Finn ladepunkt for din Elbåt!</h2>
-<p>Chabo AS er glad for å kunne presentere nettportalen elbåt lading!<br>
+<p>ChaBo AS er glad for å kunne presentere nettportalen elbåt lading!<br>
 På denne nettsiden kan du enkelt finne frem til den nærmeste ladestasjonen for din båt.<br>
 bare velg hvilket fylke du er i og få opp ladestasjoner interaktivt via google maps!</p>
 <div><img src="Elbåt.jpg" width="720px" height="480px"></div>
 <div></div>
-<p><bold>© Chabo As</bold></p>
+<p><bold>© ChaBo As</bold></p>
 </center>
+<script type="application/javascript">
+function myFunction() {
+ 
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+		document.getElementById("DropDownList").style.display = "none";
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+  else
+  {
+		document.getElementById("DropDownList").style.display = "block";
+  }
+}
+</script>
 </body>
 </html>

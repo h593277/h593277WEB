@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChaBo AS</title>
+<link rel="stylesheet" type="text/css" href="Styling.css">
+</head>
+<body>
+ <ul class="ListClass">
+  <li class="ListElemClass"><a href="Startside.html">Hjem</a></li>
+  <li class="ListElemClass" style="display: none>
+  <div id="myDropdown" class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" style="display: block;">Ladepunkter</button>
+  <div id="DropDownList" class="dropdown-content" style="position: absolute;">
+    <a href="Ladepunkt.html" style="z-index: 999;">Bergen</a>
+    <a href="LadePunktOslo.html" style="z-index: 999";>Oslo</a>
+    <a href="LadepunktLofoten.html" style="z-index: 999";>Lofoten</a>
+  </div>
+</div>
+</li>
+  <li class="ListElemClass"><a href="Kontakt.html">Kontakt</a></li>
+  <li class="ListElemClass"><a href="OmOss.html">Om Oss</a></li>
+</ul> 
+<center>
+<h1>Om Oss</h1>
+<h2>ChaBo AS</h2>
+<p>Akkurat som elbiler har eksplodert i popularitet de siste årene ser nå ChaBo AS lignende muligheter for elbåt! Derfor bygger vi ut ladestasjoner over hele norge for å fremskynde utviklingen.<br> 
+Videre har vi utviklet denne nettportalen slik at du som elbåt eier kan lettere finne frem til nærmeste ladestasjon.</p>
+<div></div>
+<p><bold>© ChaBo AS</bold></p>
+</center>
+<script type="application/javascript">
+function myFunction() {
+ 
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+		document.getElementById("DropDownList").style.display = "none";
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+  else
+  {
+		document.getElementById("DropDownList").style.display = "block";
+  }
+}
+</script>
+</body>
+</html>

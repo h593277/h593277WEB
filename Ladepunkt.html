@@ -12,9 +12,18 @@ th, td {
 <body>
  <ul class="ListClass">
   <li class="ListElemClass"><a href="Startside.html">Hjem</a></li>
-  <li class="ListElemClass"><a href="Ladepunkt.html">Ladepunkt</a></li>
-  <li class="ListElemClass"><a href="contact.html">Contact</a></li>
-  <li class="ListElemClass"><a href="about.html">About</a></li>
+  <li class="ListElemClass" style="display: none>
+  <div id="myDropdown" class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" style="display: block;">Ladepunkter</button>
+  <div id="DropDownList" class="dropdown-content" style="position: absolute;">
+    <a href="Ladepunkt.html" style="z-index: 999;">Bergen</a>
+    <a href="LadePunktOslo.html" style="z-index: 999";>Oslo</a>
+    <a href="LadepunktLofoten.html" style="z-index: 999";>Lofoten</a>
+  </div>
+</div>
+</li>
+  <li class="ListElemClass"><a href="Kontakt.html">Kontakt</a></li>
+  <li class="ListElemClass"><a href="OmOss.html">Om Oss</a></li>
 </ul> 
 <center>
 <h1>Elbåt Lading</h1>
@@ -76,8 +85,31 @@ th, td {
 	</table>
 <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22295.20053003996!2d5.3016888334868!3d60.40169077127171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f2c84353fcaf974!2sBergen%20Havn!5e0!3m2!1sno!2sno!4v1598441420066!5m2!1sno!2sno" 
 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
-<p><bold>© Chabo As</bold></p>
+<p><bold>© ChaBo As</bold></p>
 <div>
 </center>
+<script type="application/javascript">
+function myFunction() {
+ 
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+		document.getElementById("DropDownList").style.display = "none";
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+  else
+  {
+		document.getElementById("DropDownList").style.display = "block";
+  }
+}
+</script>
 </body>
 </html>

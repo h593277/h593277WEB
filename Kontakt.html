@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChaBo AS</title>
+<link rel="stylesheet" type="text/css" href="Styling.css">
+</head>
+<body>
+ <ul class="ListClass">
+  <li class="ListElemClass"><a href="Startside.html">Hjem</a></li>
+  <li class="ListElemClass" style="display: none>
+  <div id="myDropdown" class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" style="display: block;">Ladepunkter</button>
+  <div id="DropDownList" class="dropdown-content" style="position: absolute;">
+    <a href="Ladepunkt.html" style="z-index: 999;">Bergen</a>
+    <a href="LadePunktOslo.html" style="z-index: 999";>Oslo</a>
+    <a href="LadepunktLofoten.html" style="z-index: 999";>Lofoten</a>
+  </div>
+</div>
+</li>
+  <li class="ListElemClass"><a href="Kontakt.html">Kontakt</a></li>
+  <li class="ListElemClass"><a href="OmOss.html">Om Oss</a></li>
+</ul> 
+<center>
+<h1>Kontakt</h1>
+<h2>ChaBo AS</h2>
+ <address>
+    E-Post: <a href="ChaboAsExample@hotmail.com"></a>ChaboAsExample@hotmail.com<br>
+    Telefon: 99999999 <br>
+    Addresse: 31 løvensgaten <br>
+    Post Addresse: 0010 Oslo<br>
+    Norge<br>
+  </address>
+  <div><img src="KontorOslo.jpeg" width="720px" height="480px"></div>
+<div></div>
+<p><bold>© ChaBo AS</bold></p>
+</center>
+<script type="application/javascript">
+function myFunction() {
+ 
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+		document.getElementById("DropDownList").style.display = "none";
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+  else
+  {
+		document.getElementById("DropDownList").style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
