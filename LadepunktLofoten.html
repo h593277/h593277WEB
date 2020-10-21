@@ -54,43 +54,8 @@ om det skulle være nødvendig med påfyll.</p>
 		<li>250kW</li>
 		</ul>
 	</span>
-	<table>
-	<tr>
-	<th>Ladetid</th>
-	<th>Batteri</th>
-	<td>70 kWh</td>
-	<td>140 kWh</td>
-	<td>210 kWh</td>
-	</tr>
-	<tr>
-	<th>Ladeffekt</th>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	</tr>
-	<tr>
-	<th>50kW</th>
-	<td></td>
-	<td>75 min</td>
-	<td>165 min</td>
-	<td>225 min</td>
-	</tr>
-	<tr>
-	<th>150kW</th>
-	<td></td>
-	<td>25 min</td>
-	<td>55 min</td>
-	<td>75 min</td>
-	</tr>
-	<tr>
-	<th>250kW</th>
-	<td></td>
-	<td>15 min</td>
-	<td>40 min</td>
-	<td>50 min</td>
-	</tr>
-	</table>
+	<div><button onclick="LadeFunction()" id="bildebtn" class="btn" style="display: block;">Sjekk Ladetid</button></div>
+	  <div id="ladeBilde" style="display: none"><img src="LadeTid.png" width="480px" height="360px"></div>
 <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.4396581722367!2d13.547726906663998!3d68.1221875974594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45de1385280c2d6b%3A0x71310e9680547748!2zR3JhdmRhbCBTbcOlYsOldGhhdm4!5e0!3m2!1sno!2sno!4v1598692931793!5m2!1sno!2sno"
 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
 <p><bold>© ChaBo As</bold></p>
@@ -116,6 +81,21 @@ window.onclick = function(event) {
   else
   {
 		document.getElementById("DropDownList").style.display = "block";
+  }
+}
+
+function LadeFunction() {
+ var bilde = document.getElementById("ladeBilde");
+ var displaybutton = document.getElementById("bildebtn");
+  if (bilde.style.display == "none") {
+    
+		bilde.style.display = "block";
+		displaybutton.innerHTML = "Skjul";
+  }
+  else
+  {
+		bilde.style.display = "none";
+		displaybutton.innerHTML = "Sjekk Ladetid";
   }
 }
 </script>
